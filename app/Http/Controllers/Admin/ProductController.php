@@ -247,5 +247,4 @@ class ProductController extends Controller
             'message' => '圖片排序已更新'
         ]);
     }
-
 }

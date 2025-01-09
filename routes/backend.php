@@ -29,6 +29,8 @@ use App\Http\Controllers\Admin\{
     SiteSettingController,
     PostCategoryController,
     FreeShippingController,
+    AboutUsController,
+    FeedbackController,
 };
 
 
@@ -98,8 +100,11 @@ Route::group([
     Route::post('admins/{admin}/toggle-status', [AdminController::class, 'toggleStatus'])
         ->name('admins.toggle-status');
 
-    // 關於我們管理
+    // 文章管理
     Route::resource('posts', PostController::class);
+
+    // 關於我們管理
+    Route::resource('about-us', AboutUsController::class);
 
     // 規格管理
     Route::resource('specifications', ProductSpecificationController::class);

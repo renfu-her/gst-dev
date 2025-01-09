@@ -163,4 +163,8 @@ Route::group([
     Route::resource('free-shippings', FreeShippingController::class);
     Route::post('free-shippings/{freeShipping}/toggle-active', [FreeShippingController::class, 'toggleActive'])
         ->name('free-shippings.toggle-active');
+
+    // 反饋管理
+    Route::resource('feedbacks', FeedbackController::class)->only(['index', 'show', 'destroy']);
+
 });

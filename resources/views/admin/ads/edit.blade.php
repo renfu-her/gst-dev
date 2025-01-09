@@ -38,24 +38,27 @@
                                 </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="image" class="form-label">更新圖片 (<span class="text-danger">寬度
-                                        1920px</span>)</label>
-                                <input type="file" class="form-control @error('image') is-invalid @enderror"
-                                    id="image" name="image" accept="image/*">
-                                @error('image')
-                                    <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-
-
-                            <div class="mb-3">
-                                <label class="form-label">當前手機顯示圖片</label>
-                                <div>
-                                    <img src="{{ asset('storage/ads/' . $ad->image_thumb) }}" alt="{{ $ad->title }}"
-                                        style="max-width: 200px">
+                            @if ($ad->image)
+                                <div class="mb-3">
+                                    <label for="image" class="form-label">更新圖片 (<span class="text-danger">寬度
+                                            1920px</span>)</label>
+                                    <input type="file" class="form-control @error('image') is-invalid @enderror"
+                                        id="image" name="image" accept="image/*">
+                                    @error('image')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                            </div>
+                            @endif
+
+                            @if ($ad->image_thumb)
+                                <div class="mb-3">
+                                    <label class="form-label">當前手機顯示圖片</label>
+                                    <div>
+                                        <img src="{{ asset('storage/ads/' . $ad->image_thumb) }}" alt="{{ $ad->title }}"
+                                            style="max-width: 200px">
+                                    </div>
+                                </div>
+                            @endif
 
                             <div class="mb-3">
                                 <label for="image_thumb" class="form-label">更新手機顯示圖片 (<span class="text-danger">寬度

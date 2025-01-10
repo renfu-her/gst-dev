@@ -211,27 +211,38 @@
                             </div> --}}
                         </div>
                     </div>
-                    <div class="col-xl-8 col-md-12">
+                    <div class="col-xl-4 col-md-12">
                         <div class="sofax-footer-menu ml-100 sofax-footer-active">
-                            <h5>快速連結</h5>
+                            <h5>服務項目</h5>
                             <ul>
-                                <li><a href='{{ route('home') }}'>首頁</a></li>
-                                <li><a href='#'>服務項目</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#">ERP 導入服務</a></li>
-                                        <li><a href="#">專案開發</a></li>
-                                        <li><a href="#">軟體銷售</a></li>
-                                        <li><a href="#">機房規劃建置</a></li>
-                                        <li><a href="#">資訊委外服務</a></li>
-                                        <li><a href="#">硬體銷售</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href='#'>ERP 導入服務</a></li>
+                                <li><a href='#'>專案開發</a></li>
+                                <li><a href='#'>軟體銷售</a></li>
+                                <li><a href='#'>機房規劃建置</a></li>
+                                <li><a href='#'>資訊委外服務</a></li>
+                                <li><a href='#'>硬體銷售</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="sofax-footer-menu ml-100 sofax-footer-active">
+                            <h5>隱私權政策</h5>
+                            <ul>
+                                <li><a href='#'>隱私權政策</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-md-12">
+                        <div class="sofax-footer-menu ml-100 sofax-footer-active">
+                            <h5>關於我們</h5>
+                            <ul>
                                 <li><a href='#'>關於我們</a></li>
                                 <li><a href='#'>聯絡我們</a></li>
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="sofax-footer-bottom center">

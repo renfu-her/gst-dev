@@ -153,9 +153,8 @@
                         <div class="sofax-footer-wrap mr-15">
                             <a href='index.htm'><img src="{{ asset('frontend/assets/images/logo/logo-dark.svg') }}"
                                     alt=""></a>
-                            <p>Sofax is best softwere platform manage your sales depends on your specific business needs
-                                budget & industry.</p>
-                            <div class="sofax-social-icon">
+                            <p>格尚資訊是專業的資訊服務公司，提供ERP導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售等服務。</p>
+                            {{-- <div class="sofax-social-icon">
                                 <ul>
                                     <li>
                                         <a href="https://www.twitter.com/">
@@ -209,42 +208,30 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-4">
+                    <div class="col-xl-8 col-md-12">
                         <div class="sofax-footer-menu ml-100 sofax-footer-active">
-                            <h5>Company</h5>
+                            <h5>快速連結</h5>
                             <ul>
-                                <li><a href='about-us.html'>About Us</a></li>
-                                <li><a href='contact-us.html'>Contact US</a></li>
-                                <li><a href='contact-us.html'>Privacy Policy</a></li>
-                                <li><a href='terms%26condition.html'>Terms & Conditions</a></li>
+                                <li><a href='{{ route('home') }}'>首頁</a></li>
+                                <li><a href='#'>服務項目</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">ERP 導入服務</a></li>
+                                        <li><a href="#">專案開發</a></li>
+                                        <li><a href="#">軟體銷售</a></li>
+                                        <li><a href="#">機房規劃建置</a></li>
+                                        <li><a href="#">資訊委外服務</a></li>
+                                        <li><a href="#">硬體銷售</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='#'>關於我們</a></li>
+                                <li><a href='#'>聯絡我們</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-4">
-                        <div class="sofax-footer-menu ml-50">
-                            <h5>Utility pages</h5>
-                            <ul>
-                                <li><a href='contact-us.html'>Instructions</a></li>
-                                <li><a href='contact-us.html'>Style guide</a></li>
-                                <li><a href='404.html'>404 Pages</a></li>
-                                <li><a href='contact-us.html'>Licenses</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-4">
-                        <div class="sofax-footer-menu sofax-footer-active">
-                            <h5>Download Now</h5>
-                            <a class="social-icon" href="https://www.apple.com/app-store/">
-                                <img src="assets/images/v1/app-store.png" alt="">
-                            </a>
-                            <a class="social-icon" href="https://playstore.com/">
-                                <img src="assets/images/v1/play-store.png" alt="">
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="sofax-footer-bottom center">

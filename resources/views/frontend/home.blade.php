@@ -7,6 +7,72 @@
         <div class="pt-24 md:pt-32 lg:pt-40 xl:pt-52">
             <!-- Section Container -->
             <div class="container">
+
+                <!-- Hero Carousel -->
+                <div class="hero-carousel swiper mb-10 pt-0 xl:h-[200px]">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="relative flex min-h-[200px] items-center justify-center rounded-2xl bg-colorGrey px-6 py-12 md:px-12">
+                                <div class="text-center">
+                                    <h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">銷售管理解決方案</h2>
+                                    <p class="mb-8 text-lg">專業的銷售管理平台，助您提升業務效率</p>
+                                    <a href="#" class="btn btn-primary">
+                                        <span>立即體驗</span>
+                                        <span>立即體驗</span>
+                                    </a>
+                                </div>
+                                <img src="{{ asset('frontend/assets/img/images/banner/home-banner-01.webp') }}"
+                                    alt="hero-1"
+                                    class="absolute left-0 top-0 h-full w-full rounded-2xl object-cover opacity-20">
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="relative flex min-h-[200px] items-center justify-center rounded-2xl bg-colorGrey px-6 py-12 md:px-12">
+                                <div class="text-center">
+                                    <h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">數據驅動決策</h2>
+                                    <p class="mb-8 text-lg">智能分析系統，讓決策更精準</p>
+                                    <a href="#" class="btn btn-primary">
+                                        <span>了解更多</span>
+                                        <span>了解更多</span>
+                                    </a>
+                                </div>
+                                <img src="{{ asset('frontend/assets/img/images/banner/home-banner-02.webp') }}"
+                                    alt="hero-2"
+                                    class="absolute left-0 top-0 h-full w-full rounded-2xl object-cover opacity-20">
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div
+                                class="relative flex min-h-[200px] items-center justify-center rounded-2xl bg-colorGrey px-6 py-12 md:px-12">
+                                <div class="text-center">
+                                    <h2 class="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">客戶關係管理</h2>
+                                    <p class="mb-8 text-lg">全方位客戶服務，提升客戶滿意度</p>
+                                    <a href="#" class="btn btn-primary">
+                                        <span>開始使用</span>
+                                        <span>開始使用</span>
+                                    </a>
+                                </div>
+                                <img src="{{ asset('frontend/assets/img/images/banner/home-banner-03.webp') }}"
+                                    alt="hero-3"
+                                    class="absolute left-0 top-0 h-full w-full rounded-2xl object-cover opacity-20">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 导航按钮和分页器需要放在 swiper 容器内 -->
+                    <div class="swiper-button-next !text-black after:!text-2xl"></div>
+                    <div class="swiper-button-prev !text-black after:!text-2xl"></div>
+                    <div class="swiper-pagination !bottom-4"></div>
+                </div>
+
+                <!-- 原有的内容保持不变 -->
                 <div class="relative">
                     <!-- Hero Area -->
                     <div class="mx-auto max-w-5xl">
@@ -94,32 +160,32 @@
                                 width="201" height="48">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-4.png') }}" alt="client-img-4"
-                                width="189" height="40">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-4.png') }}"
+                                alt="client-img-4" width="189" height="40">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-5.png') }}" alt="client-img-5"
-                                width="196" height="48">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-5.png') }}"
+                                alt="client-img-5" width="196" height="48">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-1.png') }}" alt="client-img-1"
-                                width="199" height="48">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-1.png') }}"
+                                alt="client-img-1" width="199" height="48">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-2.png') }}" alt="client-img-2"
-                                width="199" height="49">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-2.png') }}"
+                                alt="client-img-2" width="199" height="49">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-3.png') }}" alt="client-img-3"
-                                width="201" height="48">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-3.png') }}"
+                                alt="client-img-3" width="201" height="48">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-4.png') }}" alt="client-img-4"
-                                width="189" height="40">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-4.png') }}"
+                                alt="client-img-4" width="189" height="40">
                         </div>
                         <div class="swiper-slide flex justify-center">
-                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-5.png') }}" alt="client-img-5"
-                                width="196" height="48">
+                            <img src="{{ asset('frontend/assets/img/images/home-1/client-img-5.png') }}"
+                                alt="client-img-5" width="196" height="48">
                         </div>
                     </div>
                 </div>
@@ -1186,3 +1252,7 @@
     </section>
     <!--...::: CTA Section End :::... -->
 @endsection
+
+@push('js')
+    <script src="{{ asset('frontend/assets/js/swiper-custom.js') }}"></script>
+@endpush

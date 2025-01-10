@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sofax | SASS & Startup Tailwind Template</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('frontend/assets/img/images/logo-192x192.png') }}" type="image/png">
 
     <!-- Site font -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/fonts/iconfonts/remixicon.css') }}">

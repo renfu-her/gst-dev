@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sofax || Responsive HTML 5 Template</title>
+    <title>@yield('title', '格尚資訊')</title>
+    <meta name="description" content="@yield('description', '格尚資訊')">
+    <meta name="keywords" content="@yield('keywords', '格尚資訊')">
+
+    <meta property="og:title" content="@yield('title', '格尚資訊')">
+    <meta property="og:description" content="@yield('description', '格尚資訊')">
+    <meta property="og:image" content="@yield('image', 'https://www.gst.com/frontend/assets/images/logo-2-192x192.png')">
+    <meta property="og:url" content="@yield('url', 'https://www.gst.com')">
+    <meta property="og:type" content="website">
 
     <link rel="shortcut icon" href="{{ asset('frontend/assets/images/logo-2-192x192.png') }}" type="image/png">
     <link rel="icon" href="{{ asset('frontend/assets/images/logo-2-192x192.png') }}" type="image/png">

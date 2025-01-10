@@ -45,17 +45,17 @@
 
     <div class="section sofax-section-padding bg-light">
         <div class="container">
-            <div class="sofax-section-title max-width-770 ">
+            <div class="sofax-section-title max-width-770">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8">
                         <div class="tg-heading-subheading animation-style3">
-                            <h2>Solution to organize your sales in one place</h2>
+                            <h2>專業資訊服務整合方案</h2>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 d-flex justify-content-end align-items-center">
                         <div class="sofax-title-btn wow fadeInUpX">
-                            <a class='sofax-default-btn pill' data-text='View all services' href='service.html'>
-                                <span class="button-wraper">View all services</span>
+                            <a class='sofax-default-btn pill' data-text='查看所有服務' href='service.html'>
+                                <span class="button-wraper">查看所有服務</span>
                             </a>
                         </div>
                     </div>
@@ -68,10 +68,9 @@
                             <img src="{{ asset('frontend/assets/images/v1/icon3.png') }}" alt="">
                         </div>
                         <div class="sofax-iconbox-data">
-                            <h4>Workflow Automation</h4>
-                            <p>Repetitive a tasks & workflows, such as email communications, follow-up, & data entry,
-                                freeing up sales.</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>More details <img
+                            <h4>ERP系統導入</h4>
+                            <p>專業團隊協助企業導入ERP系統，優化營運流程，提升管理效率。</p>
+                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
                                     src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
                         </div>
                     </div>
@@ -82,10 +81,9 @@
                             <img src="{{ asset('frontend/assets/images/v1/icon2.png') }}" alt="">
                         </div>
                         <div class="sofax-iconbox-data">
-                            <h4>Lead Management</h4>
-                            <p>Tracking, qualifying and nurturing to customers or leads throughout their journey in the
-                                sales pipeline.</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>More details <img
+                            <h4>軟體銷售服務</h4>
+                            <p>提供多元化軟體解決方案，滿足企業各項資訊應用需求。</p>
+                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
                                     src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
                         </div>
                     </div>
@@ -96,10 +94,9 @@
                             <img src="{{ asset('frontend/assets/images/v1/icon1.png') }}" alt="">
                         </div>
                         <div class="sofax-iconbox-data">
-                            <h4>Sales Forecasting</h4>
-                            <p>Analyzing past sales data, including sales volume, revenue customers to demographics &
-                                seasonality.</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>More details <img
+                            <h4>資訊委外服務</h4>
+                            <p>專業資訊團隊提供全方位IT服務，協助企業降低營運成本。</p>
+                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
                                     src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
                         </div>
                     </div>

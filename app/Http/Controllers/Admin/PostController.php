@@ -120,7 +120,9 @@ class PostController extends Controller
             }
         }
 
-        $validated['is_active'] = $validated['is_active'] ? 1 : 0;
+        if ($request->has('is_active')) {
+            $validated['is_active'] = $validated['is_active'] ? 1 : 0;
+        }
 
         $post->update($validated);
 

@@ -18,14 +18,17 @@
             <div class="carousel-inner">
                 @foreach ($homeAds as $key => $ad)
                     <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                        <div class="carousel-overlay"></div>
                         <img src="{{ $ad->image_path }}" class="d-block w-100 h-100 object-fit-cover"
                             alt="{{ $ad->title }}">
                         <div class="carousel-caption d-none d-md-block">
-                            <h2 class="display-5 fw-bold">{{ $ad->title }}</h2>
-                            <p class="fs-4">{{ $ad->description }}</p>
-                            @if ($ad->link)
-                                <a href="{{ $ad->link }}" class="btn btn-primary btn-lg">了解更多</a>
-                            @endif
+                            <div>
+                                <h2 class="display-5 fw-bold">{{ $ad->title }}</h2>
+                                <p class="fs-4">{{ $ad->description }}</p>
+                                @if ($ad->link)
+                                    <a href="{{ $ad->link }}" class="btn btn-primary btn-lg">了解更多</a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -53,54 +56,30 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 d-flex justify-content-end align-items-center">
-                        <div class="sofax-title-btn wow fadeInUpX">
-                            <a class='sofax-default-btn pill' data-text='查看所有服務' href='service.html'>
-                                <span class="button-wraper">查看所有服務</span>
-                            </a>
+                        <div class='sofax-default-btn pill' data-text='查看所有服務' href='service.html'>
+                            <span class="button-wraper">查看所有服務</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-md-6">
-                    <div class="sofax-iconbox-wrap wow fadeInUpX" data-wow-delay="0.1s">
-                        <div class="sofax-iconbox-icon">
-                            <img src="{{ asset('frontend/assets/images/v1/icon3.png') }}" alt="">
-                        </div>
-                        <div class="sofax-iconbox-data">
-                            <h4>ERP系統導入</h4>
-                            <p>專業團隊協助企業導入ERP系統，優化營運流程，提升管理效率。</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
-                                    src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="sofax-iconbox-wrap wow fadeInUpX" data-wow-delay="0.2s">
-                        <div class="sofax-iconbox-icon">
-                            <img src="{{ asset('frontend/assets/images/v1/icon2.png') }}" alt="">
-                        </div>
-                        <div class="sofax-iconbox-data">
-                            <h4>軟體銷售服務</h4>
-                            <p>提供多元化軟體解決方案，滿足企業各項資訊應用需求。</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
-                                    src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
+                @foreach ($posts as $post)
+                    <div class="col-xl-4 col-md-6">
+                        <div class="sofax-iconbox-wrap wow fadeInUpX" data-wow-delay="0.{{ $loop->iteration }}s">
+                            <div class="sofax-iconbox-icon">
+                                <img src="{{ $post->image_url }}" alt="{{ $post->title }}" class="service-icon">
+                            </div>
+                            <div class="sofax-iconbox-data">
+                                <h4 class="service-title">{{ $post->title }}</h4>
+                                <p class="service-content">{{ $post->content }}</p>
+                                <a class='sofax-icon-btn' href='#'>
+                                    更多詳情
+                                    <img src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="sofax-iconbox-wrap wow fadeInUpX" data-wow-delay="0.3s">
-                        <div class="sofax-iconbox-icon">
-                            <img src="{{ asset('frontend/assets/images/v1/icon1.png') }}" alt="">
-                        </div>
-                        <div class="sofax-iconbox-data">
-                            <h4>資訊委外服務</h4>
-                            <p>專業資訊團隊提供全方位IT服務，協助企業降低營運成本。</p>
-                            <a class='sofax-icon-btn' href='single-service.html'>更多詳情 <img
-                                    src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt=""></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -152,6 +131,42 @@
             top: 50%;
             transform: translateY(-50%);
             bottom: auto;
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .caption-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明黑色背景 */
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .carousel-caption h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption p {
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption .btn {
+            text-shadow: none;
+            padding: 10px 30px;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-caption .btn:hover {
+            background-color: #fff;
+            color: #000;
         }
 
         /* Font Awesome 箭头样式 */
@@ -183,6 +198,115 @@
             #heroCarousel .carousel-item img {
                 height: 250px;
             }
+        }
+
+        .sofax-iconbox-wrap {
+            height: 100%;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .sofax-iconbox-icon {
+            margin-bottom: 30px;
+        }
+
+        .sofax-iconbox-icon img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .sofax-iconbox-data {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .service-content {
+            flex-grow: 1;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .sofax-icon-btn {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        /* 確保每行的卡片高度一致 */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-xl-4 {
+            margin-bottom: 30px;
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* 整體半透明遮罩 */
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+            width: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .carousel-caption h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption p {
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption .btn {
+            text-shadow: none;
+            padding: 10px 30px;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-caption .btn:hover {
+            background-color: #fff;
+            color: #000;
         }
     </style>
 @endpush

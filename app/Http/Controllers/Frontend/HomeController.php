@@ -8,6 +8,7 @@ use App\Models\Activity;
 use App\Models\Product;
 use App\Models\Advert;
 use App\Models\HomeAd;
+use App\Models\Post;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -18,7 +19,15 @@ class HomeController extends Controller
             ->where('is_active', 1)
             ->get();
 
-        return view('frontend.home', compact('homeAds'));
+        $posts = Post::orderBy('sort_order', 'asc')
+            ->with('category')
+            ->whereHas('category', function ($query) {
+                $query->where('name', '首頁服務');
+            })
+            ->where('is_active', 1)
+            ->get();
+
+        return view('frontend.home', compact('homeAds', 'posts'));
     }
 
     public function memberAgreement()

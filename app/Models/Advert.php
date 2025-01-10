@@ -30,4 +30,9 @@ class Advert extends Model
         'is_active' => 'boolean',
         'sort_order' => 'integer'
     ];
+
+    public function getImagePathAttribute()
+    {
+        return asset('storage/ads/' . $this->image);
+    }
 }

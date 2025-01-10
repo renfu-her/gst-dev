@@ -125,7 +125,6 @@
         </div>
     </div>
     <!-- end service section -->
-   
 @endsection
 
 @push('css')

@@ -6,46 +6,29 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <!-- 指示器 -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                @foreach ($homeAds as $key => $ad)
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="{{ $key }}"
+                        class="{{ $key == 0 ? 'active' : '' }}" aria-current="{{ $key == 0 ? 'true' : 'false' }}"
+                        aria-label="Slide {{ $key + 1 }}">
+                    </button>
+                @endforeach
             </div>
 
             <!-- 轮播内容 -->
             <div class="carousel-inner">
-                <!-- Slide 1: ERP導入服務 & 專案開發 -->
-                <div class="carousel-item active">
-                    <img src="{{ asset('frontend/assets/images/banner/home-banner-01.webp') }}"
-                        class="d-block w-100 h-100 object-fit-cover" alt="ERP與專案開發">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-5 fw-bold">企業資訊整合方案</h2>
-                        <p class="fs-4">ERP導入服務 • 專案開發</p>
-                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
+                @foreach ($homeAds as $key => $ad)
+                    <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                        <img src="{{ $ad->image_path }}" class="d-block w-100 h-100 object-fit-cover"
+                            alt="{{ $ad->title }}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="display-5 fw-bold">{{ $ad->title }}</h2>
+                            <p class="fs-4">{{ $ad->description }}</p>
+                            @if ($ad->link)
+                                <a href="{{ $ad->link }}" class="btn btn-primary btn-lg">了解更多</a>
+                            @endif
+                        </div>
                     </div>
-                </div>
-
-                <!-- Slide 2: 軟體銷售 & 機房規劃建置 -->
-                <div class="carousel-item">
-                    <img src="{{ asset('frontend/assets/images/banner/home-banner-02.webp') }}"
-                        class="d-block w-100 h-100 object-fit-cover" alt="軟體與機房服務">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-5 fw-bold">軟體與基礎建設</h2>
-                        <p class="fs-4">軟體銷售 • 機房規劃建置</p>
-                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
-                    </div>
-                </div>
-
-                <!-- Slide 3: 資訊委外服務 & 硬體銷售 -->
-                <div class="carousel-item">
-                    <img src="{{ asset('frontend/assets/images/banner/home-banner-03.webp') }}"
-                        class="d-block w-100 h-100 object-fit-cover" alt="資訊委外與硬體服務">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2 class="display-5 fw-bold">資訊服務與硬體支援</h2>
-                        <p class="fs-4">資訊委外服務 • 硬體銷售</p>
-                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <!-- 使用 Font Awesome 6 的控制按钮 -->

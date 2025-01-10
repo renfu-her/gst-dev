@@ -53,7 +53,7 @@ class AdminAuthController extends Controller
             ]);
 
             $request->session()->regenerate();
-            return redirect()->intended('/admin/products');
+            return redirect()->intended('/admin/posts');
         }
 
         return back()

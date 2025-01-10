@@ -1,6 +1,65 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+    <!-- Hero Carousel -->
+    <div class="sofax-slider-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- 指示器 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- 轮播内容 -->
+            <div class="carousel-inner">
+                <!-- Slide 1: ERP導入服務 & 專案開發 -->
+                <div class="carousel-item active">
+                    <img src="{{ asset('frontend/assets/images/banner/home-banner-01.webp') }}"
+                        class="d-block w-100 h-100 object-fit-cover" alt="ERP與專案開發">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-5 fw-bold">企業資訊整合方案</h2>
+                        <p class="fs-4">ERP導入服務 • 專案開發</p>
+                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: 軟體銷售 & 機房規劃建置 -->
+                <div class="carousel-item">
+                    <img src="{{ asset('frontend/assets/images/banner/home-banner-02.webp') }}"
+                        class="d-block w-100 h-100 object-fit-cover" alt="軟體與機房服務">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-5 fw-bold">軟體與基礎建設</h2>
+                        <p class="fs-4">軟體銷售 • 機房規劃建置</p>
+                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3: 資訊委外服務 & 硬體銷售 -->
+                <div class="carousel-item">
+                    <img src="{{ asset('frontend/assets/images/banner/home-banner-03.webp') }}"
+                        class="d-block w-100 h-100 object-fit-cover" alt="資訊委外與硬體服務">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="display-5 fw-bold">資訊服務與硬體支援</h2>
+                        <p class="fs-4">資訊委外服務 • 硬體銷售</p>
+                        <a href="#" class="btn btn-primary btn-lg">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 使用 Font Awesome 6 的控制按钮 -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <i class="fa-solid fa-chevron-left fa-2x"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <i class="fa-solid fa-chevron-right fa-2x"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
     <div class="sofax-hero-section overflow-hidden">
         <div class="container">
             <div class="sofax-hero-content center">
@@ -570,6 +629,40 @@
                     </div>
                 </div>
             </div>
+            <div class="sofax-testimonial-content">
+                <div class="sofax-testimonial-rating">
+                    <ul>
+                        <li>
+                            <img src="{{ asset('frontend/assets/images/v1/rattingful.svg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('frontend/assets/images/v1/rattingful.svg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('frontend/assets/images/v1/rattingful.svg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('frontend/assets/images/v1/rattingful.svg') }}" alt="">
+                        </li>
+                        <li>
+                            <img src="{{ asset('frontend/assets/images/v1/rattingful.svg') }}" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="sofax-testimonial-data">
+                    <p>Great results enjoyable to the works with & most importanly enabled us to the presence on the
+                        website needed conduct business.</p>
+                </div>
+                <div class="sofax-testimonial-author">
+                    <div class="sofax-testimonial-author-thumb">
+                        <img src="{{ asset('frontend/assets/images/v1/member1.png') }}" alt="">
+                    </div>
+                    <div class="sofax-testimonial-author-data">
+                        <h5>Derrick Turner</h5>
+                        <p>Co-Founder</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="sofax-testimonial-slider-2">
             <div class="sofax-testimonial-content">
@@ -801,3 +894,83 @@
     </section>
     <!-- end cta section -->
 @endsection
+
+@push('css')
+    <!-- 可以添加自定义样式 -->
+    <style>
+        #heroCarousel {
+            width: 100%;
+            height: 250px;
+            position: relative;
+        }
+
+        #heroCarousel .carousel-item {
+            height: 250px;
+        }
+
+        #heroCarousel .carousel-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* 响应式高度设置 */
+        @media (min-width: 992px) {
+
+            /* lg 断点 */
+            #heroCarousel,
+            #heroCarousel .carousel-item,
+            #heroCarousel .carousel-item img {
+                height: 350px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            /* xl 断点 */
+            #heroCarousel,
+            #heroCarousel .carousel-item,
+            #heroCarousel .carousel-item img {
+                height: 350px;
+            }
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            bottom: auto;
+        }
+
+        /* Font Awesome 箭头样式 */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            opacity: 0.8;
+            z-index: 5;
+        }
+
+        .carousel-control-prev i,
+        .carousel-control-next i {
+            color: #fff;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 悬停效果 */
+        .carousel-control-prev:hover i,
+        .carousel-control-next:hover i {
+            color: #fff;
+            opacity: 1;
+        }
+
+        /* 移动端设置 */
+        @media (max-width: 991px) {
+
+            #heroCarousel,
+            #heroCarousel .carousel-item,
+            #heroCarousel .carousel-item img {
+                height: 250px;
+            }
+        }
+    </style>
+@endpush

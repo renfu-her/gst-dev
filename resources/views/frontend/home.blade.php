@@ -61,17 +61,19 @@
                 @foreach ($posts as $post)
                     <div class="col-xl-4 col-md-6">
                         <div class="sofax-iconbox-wrap wow fadeInUpX" data-wow-delay="0.{{ $loop->iteration }}s">
-                            <div class="sofax-iconbox-icon">
-                                <img src="{{ $post->image_url }}" alt="{{ $post->title }}" class="service-icon">
-                            </div>
-                            <div class="sofax-iconbox-data">
-                                <h4 class="service-title">{{ $post->title }}</h4>
-                                <p class="service-content">{{ $post->content }}</p>
-                                <a class='sofax-icon-btn' href='#'>
-                                    更多詳情
-                                    <img src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt="">
-                                </a>
-                            </div>
+                            <a href="{{ $post->link_url }}" target="{{ $post->target ? '_blank' : '_self' }}">
+                                <div class="sofax-iconbox-icon">
+                                    <img src="{{ $post->image_url }}" alt="{{ $post->title }}" class="service-icon">
+                                </div>
+                                <div class="sofax-iconbox-data">
+                                    <h4 class="service-title">{{ $post->title }}</h4>
+                                    <p class="service-content">{{ $post->content }}</p>
+                                    <a class='sofax-icon-btn' href="{{ $post->link_url }}"
+                                        target="{{ $post->target ? '_blank' : '_self' }}">
+                                        更多詳情
+                                        <img src="{{ asset('frontend/assets/images/v1/arrow-right.png') }}" alt="">
+                                    </a>
+                                </div>
                         </div>
                     </div>
                 @endforeach

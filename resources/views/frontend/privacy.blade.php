@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="privacy-content">
-                        {!! $postPrivacy->content !!}
+                        {!! Str::markdown($postPrivacy->content) !!}
                     </div>
                 </div>
             </div>

@@ -102,18 +102,41 @@
                             <li class="nav-item nav-item-has-children">
                                 <a href="{{ route('home') }}" class="nav-link-item drop-trigger">首頁 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class='nav-link-item drop-trigger'>服務項目
+                            <li class="nav-item nav-item-has-children">
+                                <a href="#" class='nav-link-item drop-trigger'>服務項目
                                     <i class="fas fa-angle-down"></i>
                                 </a>
 
-                                <ul class="sub-menu">
-                                    <li><a href="#">ERP 導入服務</a></li>
-                                    <li><a href="#">專案開發</a></li>
-                                    <li><a href="#">軟體銷售</a></li>
-                                    <li><a href="#">機房規劃建置</a></li>
-                                    <li><a href="#">資訊委外服務</a></li>
-                                    <li><a href="#">硬體銷售</a></li>
+                                <ul class="sub-menu" id="submenu-1">
+
+                                    <li class="sub-menu--item">
+                                        <a href="#">
+                                            <span class="menu-item-text">
+                                                ERP 導入服務
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="#">
+                                            <span class="menu-item-text">
+                                                專案開發
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="#">
+                                            <span class="menu-item-text">
+                                                軟體銷售
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="#">
+                                            <span class="menu-item-text">
+                                                機房規劃建置
+                                            </span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">

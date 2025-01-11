@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <div class="sofax-breadcrumb"
-        style="background-image: url({{ asset('frontend/assets/images/service/privacy.webp') }})">
+    <div class="sofax-breadcrumb" style="background-image: url({{ asset('frontend/assets/images/service/privacy.webp') }})">
+        <div class="overlay"></div>
         <div class="container">
             <h1 class="post__title">隱私權政策</h1>
             <nav class="breadcrumbs">
@@ -35,6 +35,15 @@
             background-position: center;
             margin-top: 90px;
             padding-bottom: 200px;
+        }
+
+        .sofax-breadcrumb .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
         }
 
         .post__title {

@@ -113,6 +113,22 @@
                                 @enderror
                             </div>
 
+                            <div class="mb-3">
+                                <label for="link_url" class="form-label">連結網址</label>
+                                <input type="url" class="form-control @error('link_url') is-invalid @enderror"
+                                    id="link_url" name="link_url" value="{{ old('link_url', $post->link_url) }}">
+                                <div class="form-text">如果需要外部連結，請填寫完整網址</div>
+                                @error('link_url')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3 d-flex align-items-center">
+                                <input type="checkbox" class="form-check-input p-1" id="target" name="target"
+                                    value="1" {{ old('target', $post->target) ? 'checked' : '' }}>
+                                <label class="form-check-label p-1" for="target">在新視窗開啟連結</label>
+                            </div>
+
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">
                                     更新文章

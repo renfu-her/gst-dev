@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Storage;
+
 class Post extends Model
 {
     use HasFactory;
@@ -22,10 +23,13 @@ class Post extends Model
         'seo_keywords',
         'seo_description',
         'image',
+        'link_url',
+        'target',
     ];
 
     protected $casts = [
         'is_active' => 'boolean',
+        'target' => 'boolean',
     ];
 
     public function category()

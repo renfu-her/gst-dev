@@ -49,10 +49,12 @@ class PostController extends Controller
             'seo_title' => 'nullable|string|max:70',
             'seo_keywords' => 'nullable|string|max:255',
             'seo_description' => 'nullable|string|max:155',
+            'link_url' => 'nullable|url|max:255',
+            'target' => 'boolean',
         ]);
 
-
-        $validated['is_active'] = $validated['is_active'] ? 1 : 0;
+        $validated['is_active'] = $validated['is_active'] ?? false;
+        $validated['target'] = $validated['target'] ?? false;
 
         $post = Post::create($validated);
 
@@ -103,8 +105,12 @@ class PostController extends Controller
             'seo_title' => 'nullable|string|max:70',
             'seo_keywords' => 'nullable|string|max:255',
             'seo_description' => 'nullable|string|max:155',
+            'link_url' => 'nullable|url|max:255',
+            'target' => 'boolean',
         ]);
 
+        $validated['is_active'] = $validated['is_active'] ?? false;
+        $validated['target'] = $validated['target'] ?? false;
 
         if ($request->hasFile('image')) {
             // 刪除舊圖片
@@ -118,10 +124,6 @@ class PostController extends Controller
                     'posts/' . $post->id
                 );
             }
-        }
-
-        if ($request->has('is_active')) {
-            $validated['is_active'] = $validated['is_active'] ? 1 : 0;
         }
 
         $post->update($validated);

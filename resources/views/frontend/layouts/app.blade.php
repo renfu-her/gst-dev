@@ -186,7 +186,7 @@
                     <div class="col-12 col-md-3">
                         <div class="sofax-footer-wrap">
                             <a href="{{ route('home') }}"><img
-                                    src="{{ asset('frontend/assets/images/logo/logo-dark.svg') }}"
+                                    src="{{ asset('frontend/assets/images/logo/logo-1.png') }}"
                                     alt=""></a>
                             <p>格尚資訊是專業的資訊服務公司，提供ERP導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售等服務。</p>
                         </div>

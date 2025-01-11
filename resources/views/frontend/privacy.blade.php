@@ -47,10 +47,11 @@
         }
 
         .post__title {
-            color: #333;
+            color: #fff;
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .breadcrumbs {

@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/app.min.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/custom.css?v=' . time()) }}">
+
     @stack('css')
 
 </head>

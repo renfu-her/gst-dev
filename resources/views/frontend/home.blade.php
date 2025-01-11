@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Hero Carousel -->
-    <div class="sofax-slider-section">
+    <div class="sofax-slider-section" style="margin-top: -10px;">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <!-- 指示器 -->
             <div class="carousel-indicators">

@@ -1,0 +1,11 @@
+@media (max-width: 991px) {
+    .site-header .mobile-menu-trigger span:before, .site-header .mobile-menu-trigger span:after {
+        background-color: white !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .site-header .mobile-menu-trigger span {
+        background-color: white !important;
+    }
+}

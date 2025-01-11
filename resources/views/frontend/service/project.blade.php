@@ -3,7 +3,7 @@
 @section('content')
     <div class="sofax-breadcrumb">
         <div class="container">
-            <h1 class="post__title">About Us</h1>
+            <h1 class="post__title">專案開發</h1>
             <nav class="breadcrumbs">
                 <ul>
                     <li><a href='{{ route('home') }}'>首頁</a></li>

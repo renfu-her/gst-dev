@@ -3,12 +3,12 @@
 @section('content')
     <div class="sofax-breadcrumb">
         <div class="container">
-            <h1 class="post__title">About Us</h1>
+            <h1 class="post__title">硬體銷售</h1>
             <nav class="breadcrumbs">
                 <ul>
                     <li><a href='{{ route('home') }}'>首頁</a></li>
                     <li><img src="{{ asset('frontend/assets/images/about/arrow.png') }}" alt=""></li>
-                    <li aria-current="page"> 資訊委外服務</li>
+                    <li aria-current="page"> 硬體銷售</li>
                 </ul>
             </nav>
 

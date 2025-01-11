@@ -48,16 +48,11 @@
 
     <div class="section sofax-section-padding bg-light">
         <div class="container">
-            <div class="sofax-section-title max-width-770">
+            <div class="sofax-section-title text-center">
                 <div class="row">
-                    <div class="col-xl-8 col-lg-8">
+                    <div class="col-xl-12 col-lg-12">
                         <div class="tg-heading-subheading animation-style3">
                             <h2>專業資訊服務整合方案</h2>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 d-flex justify-content-end align-items-center">
-                        <div class='sofax-default-btn pill' data-text='查看所有服務' href='service.html'>
-                            <span class="button-wraper">查看所有服務</span>
                         </div>
                     </div>
                 </div>

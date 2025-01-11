@@ -110,28 +110,28 @@
                                 <ul class="sub-menu" id="submenu-1">
 
                                     <li class="sub-menu--item">
-                                        <a href="#">
+                                        <a href="{{ route('services.erp') }}">
                                             <span class="menu-item-text">
                                                 ERP 導入服務
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sub-menu--item">
-                                        <a href="#">
+                                        <a href="{{ route('services.project') }}">
                                             <span class="menu-item-text">
                                                 專案開發
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sub-menu--item">
-                                        <a href="#">
+                                        <a href="{{ route('services.software') }}">
                                             <span class="menu-item-text">
                                                 軟體銷售
                                             </span>
                                         </a>
                                     </li>
                                     <li class="sub-menu--item">
-                                        <a href="#">
+                                        <a href="{{ route('services.server') }}">
                                             <span class="menu-item-text">
                                                 機房規劃建置
                                             </span>
@@ -139,7 +139,7 @@
                                     </li>
 
                                     <li class="sub-menu--item">
-                                        <a href="{{ route('frontend.service.outsourcing') }}">
+                                        <a href="{{ route('services.outsourcing') }}">
                                             <span class="menu-item-text">
                                                 資訊委外服務
                                             </span>
@@ -147,7 +147,7 @@
                                     </li>
 
                                     <li class="sub-menu--item">
-                                        <a href="{{ route('frontend.service.hardware') }}">
+                                        <a href="{{ route('services.hardware') }}">
                                             <span class="menu-item-text">
                                                 硬體銷售
                                             </span>
@@ -164,13 +164,6 @@
 
                         </ul>
                     </nav>
-                </div>
-
-                <div class="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
-                    <a class='sofax-default-btn pill sofax-header-btn' data-text='Get started'
-                        href='contact-us.html'>
-                        <span class="button-wraper">Get started</span>
-                    </a>
                 </div>
                 <!-- mobile menu trigger -->
                 <div class="mobile-menu-trigger ">

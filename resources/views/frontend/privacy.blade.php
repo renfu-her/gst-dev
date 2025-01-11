@@ -16,6 +16,17 @@
     </div>
     <section class="sofax-section-padding5">
         <div class="container">
+            <div class="sofax-section-title">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sofax-aboutus-section-title text-center mb-5">
+                            <h2>隱私權保護政策</h2>
+                            <p class="mt-3">我們致力於保護您的個人資料安全</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="privacy-content">
@@ -46,6 +57,12 @@
             background-color: rgba(0, 0, 0, 0.6);
         }
 
+        .sofax-breadcrumb .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
         .post__title {
             color: #fff;
             font-size: 36px;
@@ -69,23 +86,24 @@
         }
 
         .breadcrumbs li {
-            color: #666;
+            color: #fff;
             font-size: 16px;
         }
 
         .breadcrumbs a {
-            color: #666;
+            color: #fff;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .breadcrumbs a:hover {
-            color: #007bff;
+            opacity: 0.8;
         }
 
         .breadcrumbs img {
             width: 16px;
             height: 16px;
+            filter: brightness(0) invert(1);
         }
 
         .privacy-content {
@@ -107,6 +125,27 @@
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 15px;
+        }
+
+        .privacy-content ul {
+            list-style: none;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content ul li {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .privacy-content ul li:before {
+            content: "•";
+            position: absolute;
+            left: -20px;
+            color: #007bff;
         }
     </style>
 @endpush

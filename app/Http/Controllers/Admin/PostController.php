@@ -109,8 +109,8 @@ class PostController extends Controller
             'target' => 'boolean',
         ]);
 
-        $validated['is_active'] = $validated['is_active'] ?? false;
-        $validated['target'] = $validated['target'] ?? false;
+        $validated['is_active'] = $request->is_active ?? 0;
+        $validated['target'] = $request->target ?? 0;
 
         if ($request->hasFile('image')) {
             // 刪除舊圖片

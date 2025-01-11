@@ -5,10 +5,11 @@ use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\Frontend\{
     HomeController,
     ServiceController,
+    PrivacyController,
 };
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
+Route::get('/privacy', [PrivacyController::class, 'index'])->name('privacy');
 // 驗證碼路由
 Route::get('/captcha', [CaptchaController::class, 'generate'])->name('captcha.generate');
 Route::post('/captcha/refresh', [CaptchaController::class, 'generate'])->name('captcha.refresh');

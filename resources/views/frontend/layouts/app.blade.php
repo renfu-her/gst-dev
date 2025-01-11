@@ -77,13 +77,13 @@
     </div>
     <!-- End All Js -->
 
-    <header class="site-header sofax-header-section site-header--menu-center" id="sticky-menu">
+    <header class="site-header sofax-header-section site-header--menu-center inner-header dark-bg" id="sticky-menu">
         <div class="container">
             <nav class="navbar site-navbar">
                 <!-- Brand Logo-->
                 <div class="brand-logo">
                     <a href='index.htm'>
-                        <img src="{{ asset('frontend/assets/images/logo/logo-dark.svg') }}" alt=""
+                        <img src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt=""
                             class="light-version-logo">
                     </a>
                 </div>
@@ -193,12 +193,12 @@
                         <div class="sofax-footer-menu ml-100 sofax-footer-active">
                             <h5>服務項目</h5>
                             <ul>
-                                <li><a href='#'>ERP 導入服務</a></li>
-                                <li><a href='#'>專案開發</a></li>
-                                <li><a href='#'>軟體銷售</a></li>
-                                <li><a href='#'>機房規劃建置</a></li>
-                                <li><a href='#'>資訊委外服務</a></li>
-                                <li><a href='#'>硬體銷售</a></li>
+                                <li><a href="{{ route('services.erp') }}">ERP 導入服務</a></li>
+                                <li><a href="{{ route('services.project') }}">專案開發</a></li>
+                                <li><a href="{{ route('services.software') }}">軟體銷售</a></li>
+                                <li><a href="{{ route('services.server') }}">機房規劃建置</a></li>
+                                <li><a href="{{ route('services.outsourcing') }}">資訊委外服務</a></li>
+                                <li><a href="{{ route('services.hardware') }}">硬體銷售</a></li>
                             </ul>
                         </div>
                     </div>
@@ -207,7 +207,7 @@
                         <div class="sofax-footer-menu ml-100 sofax-footer-active">
                             <h5>隱私權政策</h5>
                             <ul>
-                                <li><a href='#'>隱私權政策</a></li>
+                                <li><a href="{{ route('privacy') }}">隱私權政策</a></li>
                             </ul>
                         </div>
                     </div>

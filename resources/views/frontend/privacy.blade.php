@@ -8,7 +8,7 @@
                 <ul>
                     <li><a href='{{ route('home') }}'>首頁</a></li>
                     <li><img src="{{ asset('frontend/assets/images/about/arrow.png') }}" alt=""></li>
-                    <li aria-current="page"> ERP 導入服務</li>
+                    <li aria-current="page"> 隱私權政策</li>
                 </ul>
             </nav>
 

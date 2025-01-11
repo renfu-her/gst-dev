@@ -49,7 +49,7 @@ class PostController extends Controller
             'seo_title' => 'nullable|string|max:70',
             'seo_keywords' => 'nullable|string|max:255',
             'seo_description' => 'nullable|string|max:155',
-            'link_url' => 'nullable|url|max:255',
+            'link_url' => 'nullable|string|max:255',
             'target' => 'boolean',
         ]);
 
@@ -105,7 +105,7 @@ class PostController extends Controller
             'seo_title' => 'nullable|string|max:70',
             'seo_keywords' => 'nullable|string|max:255',
             'seo_description' => 'nullable|string|max:155',
-            'link_url' => 'nullable|url|max:255',
+            'link_url' => 'nullable|string|max:255',
             'target' => 'boolean',
         ]);
 

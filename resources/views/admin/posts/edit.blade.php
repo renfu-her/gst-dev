@@ -115,7 +115,7 @@
 
                             <div class="mb-3">
                                 <label for="link_url" class="form-label">連結網址</label>
-                                <input type="url" class="form-control @error('link_url') is-invalid @enderror"
+                                <input type="text" class="form-control @error('link_url') is-invalid @enderror"
                                     id="link_url" name="link_url" value="{{ old('link_url', $post->link_url) }}">
                                 <div class="form-text">如果需要外部連結，請填寫完整網址</div>
                                 @error('link_url')

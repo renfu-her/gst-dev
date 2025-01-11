@@ -77,3 +77,9 @@ select.form-control, select.typeahead, select.tt-query, select.tt-hint, .select2
     border-color: #4eadd7 !important;
     color: #ffffff;
 }
+
+.table td img, .jsgrid .jsgrid-table td img {
+    /* width: 36px;
+    height: 36px; */
+    border-radius: 0 !important;
+}

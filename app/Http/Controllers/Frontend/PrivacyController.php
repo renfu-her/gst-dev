@@ -11,7 +11,7 @@ class PrivacyController extends Controller
     public function index()
     {
 
-        $postPrivacy = Post::where('id', 8)->first();
+        $postPrivacy = Post::where('id', 7)->first();
 
         return view('frontend.privacy', compact('postPrivacy'));
     }

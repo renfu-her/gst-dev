@@ -73,9 +73,8 @@
             position: relative;
             background-size: cover;
             background-position: center;
-            padding: 140px 0 80px;
-            margin-bottom: 50px;
-            margin-top: -60px;
+            margin-top: 90px;
+            padding-bottom: 200px;
         }
 
         .sofax-breadcrumb .overlay {

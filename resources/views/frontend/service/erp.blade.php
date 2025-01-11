@@ -119,7 +119,7 @@
             position: relative;
             background-size: cover;
             background-position: center;
-            padding-top: 200px;
+            margin-top: 90px;
             padding-bottom: 200px;
         }
 

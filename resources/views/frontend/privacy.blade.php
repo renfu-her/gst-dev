@@ -1,7 +1,8 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-    <div class="sofax-breadcrumb">
+    <div class="sofax-breadcrumb"
+        style="background-image: url({{ asset('frontend/assets/images/service/privacy.webp') }})">
         <div class="container">
             <h1 class="post__title">隱私權政策</h1>
             <nav class="breadcrumbs">

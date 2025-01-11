@@ -95,6 +95,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+        
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:post_categories,id',

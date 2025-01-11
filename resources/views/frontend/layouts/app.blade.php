@@ -137,6 +137,22 @@
                                             </span>
                                         </a>
                                     </li>
+
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('frontend.service.outsourcing') }}">
+                                            <span class="menu-item-text">
+                                                資訊委外服務
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('frontend.service.hardware') }}">
+                                            <span class="menu-item-text">
+                                                硬體銷售
+                                            </span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">

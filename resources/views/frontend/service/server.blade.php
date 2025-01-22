@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="sofax-breadcrumb"
-        style="background-image: url({{ asset('frontend/assets/images/service/server-service-01.webp') }})">
+        style="background-image: url({{ asset('frontend/assets/images/service/server_service_01.webp') }})">
         <div class="overlay"></div>
         <div class="container">
             <h1 class="post__title">機房規劃建置</h1>

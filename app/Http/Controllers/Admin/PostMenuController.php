@@ -34,6 +34,9 @@ class PostMenuController extends Controller
             'title' => 'required|string|max:255',
             'image' => 'required|image|max:2048',
             'content' => 'required|string',
+            'meta_title' => 'nullable|string|max:60',
+            'meta_description' => 'nullable|string|max:160',
+            'meta_keywords' => 'nullable|string|max:255',
             'is_active' => 'boolean'
         ]);
 
@@ -63,7 +66,10 @@ class PostMenuController extends Controller
             'title' => 'required|string|max:255',
             'image' => 'nullable|image|max:2048',
             'content' => 'required|string',
-            'is_active' => 'boolean'
+            'is_active' => 'boolean',
+            'meta_title' => 'nullable|string|max:60',
+            'meta_description' => 'nullable|string|max:160',
+            'meta_keywords' => 'nullable|string|max:255',
         ]);
 
         // 圖片更新邏輯(與 ProductController 一致)

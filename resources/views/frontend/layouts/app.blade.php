@@ -84,7 +84,7 @@
             <nav class="navbar site-navbar">
                 <!-- Brand Logo-->
                 <div class="brand-logo">
-                    <a href='index.htm'>
+                    <a href="{{ route('home') }}">
                         <img src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt=""
                             class="light-version-logo">
                     </a>
@@ -102,8 +102,9 @@
                         </div>
                         <ul class="site-menu-main">
                             <li class="nav-item nav-item-has-children">
-                                <a href="{{ route('home') }}" class="nav-link-item drop-trigger">首頁 </a>
+                                <a href="{{ route('home') }}" class="nav-link-item drop-trigger">首頁</a>
                             </li>
+
                             <li class="nav-item nav-item-has-children">
                                 <a href="#" class='nav-link-item drop-trigger'>服務項目
                                     <i class="fas fa-angle-down"></i>
@@ -157,21 +158,21 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class='nav-link-item' href='#'>關於我們</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class='nav-link-item' href='#'>聯絡我們</a>
-                            </li>
 
+                            @foreach ($menuItems as $menu)
+                                <li class="nav-item">
+                                    <a href="{{ route('post-menus.show', $menu->id) }}" class="nav-link-item">
+                                        {{ $menu->title }}
+                                    </a>
+                                </li>
+                            @endforeach
                         </ul>
                     </nav>
                 </div>
                 <!-- mobile menu trigger -->
-                <div class="mobile-menu-trigger ">
+                <div class="mobile-menu-trigger">
                     <span></span>
                 </div>
-                <!--/.Mobile Menu Hamburger Ends-->
             </nav>
         </div>
     </header>
@@ -186,8 +187,7 @@
                     <div class="col-12 col-md-3">
                         <div class="sofax-footer-wrap">
                             <a href="{{ route('home') }}"><img
-                                    src="{{ asset('frontend/assets/images/logo/logo-1.png') }}"
-                                    alt=""></a>
+                                    src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt=""></a>
                             <p>格尚資訊是專業的資訊服務公司，提供ERP導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售等服務。</p>
                         </div>
                     </div>

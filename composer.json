@@ -13,6 +13,7 @@
         "laravel/reverb": "^1.4",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
+        "overtrue/pinyin": "^5.3",
         "phpoffice/phpword": "^1.3",
         "predis/predis": "^2.3",
         "tsaiyihua/laravel-ecpay": "^3.2"

@@ -161,7 +161,7 @@
 
                             @foreach ($menuItems as $menu)
                                 <li class="nav-item">
-                                    <a href="{{ route('post-menus.show', $menu->id) }}" class="nav-link-item">
+                                    <a href="{{ route('post-menus.show', $menu->slug) }}" class="nav-link-item">
                                         {{ $menu->title }}
                                     </a>
                                 </li>

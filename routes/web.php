@@ -24,9 +24,6 @@ Route::group(['prefix' => 'services', 'as' => 'services.'], function () {
     Route::get('/hardware', [ServiceController::class, 'hardware'])->name('hardware');
 });
 
-Route::get('/post-menus/{postMenu}', [PostMenuController::class, 'show'])
-    ->name('post-menus.show');
-
-Route::get('/post-menus/{postMenu}', [PostMenuController::class, 'show'])
+Route::get('/post-menus/{slug}', [PostMenuController::class, 'show'])
     ->name('post-menus.show')
-    ->where('postMenu', '[0-9]+'); // 確保 ID 為數字
+    ->where('slug', '[a-zA-Z0-9-]+');

@@ -117,19 +117,26 @@
             </a>
         </li> --}}
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.about-us.index') }}">
                 <i class="fas fa-info-circle menu-icon"></i>
                 <span class="menu-title">關於我們</span>
             </a>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.post-menus.index') }}">
+                <i class="fas fa-list menu-icon"></i>
+                <span class="menu-title">文章選單管理</span>
+            </a>
+        </li>
+
+        {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.feedbacks.index') }}">
                 <i class="fas fa-comment menu-icon"></i>
                 <span class="menu-title">反饋管理</span>
             </a>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.email-settings.index') }}">

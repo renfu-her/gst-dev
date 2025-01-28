@@ -31,6 +31,7 @@ use App\Http\Controllers\Admin\{
     FreeShippingController,
     AboutUsController,
     FeedbackController,
+    PostMenuController,
 };
 
 
@@ -167,4 +168,6 @@ Route::group([
     // 反饋管理
     Route::resource('feedbacks', FeedbackController::class)->only(['index', 'show', 'destroy']);
 
+    // 文章選單管理
+    Route::resource('post-menus', PostMenuController::class);
 });

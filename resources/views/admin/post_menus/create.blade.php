@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <span>新增文章</span>
+                        <span>新增選單文章</span>
                         <a href="{{ route('admin.post-menus.index') }}" class="btn btn-outline-secondary btn-sm">
                             返回列表
                         </a>

@@ -127,7 +127,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.post-menus.index') }}">
                 <i class="fas fa-list menu-icon"></i>
-                <span class="menu-title">文章選單管理</span>
+                <span class="menu-title">選單文章管理</span>
             </a>
         </li>
 

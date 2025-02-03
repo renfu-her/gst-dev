@@ -92,24 +92,6 @@
             </a>
         </li> --}}
 
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#faq-management" aria-expanded="false">
-                <i class="fas fa-question-circle menu-icon"></i>
-                <span class="menu-title">常見問題維護</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="faq-management">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.faq-categories.index') }}">分類管理</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.faqs.index') }}">問題管理</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
         {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.orders.index') }}">
                 <i class="fas fa-shopping-cart menu-icon"></i>
@@ -129,6 +111,24 @@
                 <i class="fas fa-list menu-icon"></i>
                 <span class="menu-title">選單文章管理</span>
             </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#faq-management" aria-expanded="false">
+                <i class="fas fa-question-circle menu-icon"></i>
+                <span class="menu-title">常見問題維護</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="faq-management">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.faq-categories.index') }}">分類管理</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.faqs.index') }}">問題管理</a>
+                    </li>
+                </ul>
+            </div>
         </li>
 
         {{-- <li class="nav-item">

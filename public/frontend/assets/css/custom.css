@@ -9,3 +9,70 @@
         background-color: white !important;
     }
 }
+
+.social-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #007bff;  /* 或其他你想要的懸停顏色 */
+}
+
+.social-links .fa-facebook:hover {
+    color: #1877f2;
+}
+
+.social-links .fa-line:hover {
+    color: #00b900;
+}
+
+.social-links .fa-instagram:hover {
+    color: #e4405f;
+}
+
+/* 右側社群連結 */
+.header-social-links {
+    display: flex;
+    align-items: center;
+}
+
+.header-social-links a {
+    color: #ffffff; /* 設置為白色 */
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.9; /* 稍微降低不透明度，使其看起來更柔和 */
+}
+
+.header-social-links a:hover {
+    opacity: 1; /* 懸停時完全不透明 */
+}
+
+/* 圖標顏色保持白色，但懸停時可以有些微變化 */
+.header-social-links .fa-facebook:hover {
+    filter: brightness(1.2);
+}
+
+.header-social-links .fa-line:hover {
+    filter: brightness(1.2);
+}
+
+.header-social-links .fa-instagram:hover {
+    filter: brightness(1.2);
+}
+
+/* 手機版響應式設計 */
+@media (max-width: 991px) {
+    .header-social-links {
+        display: none;
+    }
+
+    .mobile-menu-open .header-social-links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 15px 0;
+    }
+}

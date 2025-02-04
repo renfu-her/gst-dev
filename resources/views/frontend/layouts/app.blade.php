@@ -81,8 +81,8 @@
 
     <header class="site-header sofax-header-section site-header--menu-center inner-header dark-bg" id="sticky-menu">
         <div class="container">
-            <nav class="navbar site-navbar">
-                <!-- Brand Logo-->
+            <nav class="navbar site-navbar d-flex justify-content-between align-items-center">
+                <!-- 左側 Logo -->
                 <div class="brand-logo">
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt=""
@@ -90,6 +90,7 @@
                     </a>
                 </div>
 
+                <!-- 中間選單 -->
                 <div class="menu-block-wrapper">
                     <div class="menu-overlay"></div>
                     <nav class="menu-block" id="append-menu-header">
@@ -101,64 +102,18 @@
                             <div class="mobile-menu-close">&times;</div>
                         </div>
                         <ul class="site-menu-main">
-                            <li class="nav-item nav-item-has-children">
-                                <a href="{{ route('home') }}" class="nav-link-item drop-trigger">首頁</a>
+                            <li class="nav-item">
+                                <a href="{{ route('home') }}" class="nav-link-item">首頁</a>
                             </li>
-
-                            <li class="nav-item nav-item-has-children">
-                                <a href="#" class='nav-link-item drop-trigger'>服務項目
-                                    <i class="fas fa-angle-down"></i>
-                                </a>
-
-                                <ul class="sub-menu" id="submenu-1">
-
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.erp') }}">
-                                            <span class="menu-item-text">
-                                                ERP 導入服務
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.project') }}">
-                                            <span class="menu-item-text">
-                                                專案開發
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.software') }}">
-                                            <span class="menu-item-text">
-                                                軟體銷售
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.server') }}">
-                                            <span class="menu-item-text">
-                                                機房規劃建置
-                                            </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.outsourcing') }}">
-                                            <span class="menu-item-text">
-                                                資訊委外服務
-                                            </span>
-                                        </a>
-                                    </li>
-
-                                    <li class="sub-menu--item">
-                                        <a href="{{ route('services.hardware') }}">
-                                            <span class="menu-item-text">
-                                                硬體銷售
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link-item">服務項目</a>
                             </li>
-
+                            <li class="nav-item">
+                                <a href="#" class="nav-link-item">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link-item">聯絡我們</a>
+                            </li>
                             @foreach ($menuItems as $menu)
                                 <li class="nav-item">
                                     <a href="{{ route('post-menus.show', $menu->slug) }}" class="nav-link-item">
@@ -169,8 +124,33 @@
                         </ul>
                     </nav>
                 </div>
-                <!-- mobile menu trigger -->
-                <div class="mobile-menu-trigger">
+
+                <!-- 右側社群連結 -->
+                @if ($socialLinks && $socialLinks->is_active)
+                    <div class="header-social-links">
+                        @if (!empty($socialLinks->facebook_url))
+                            <a href="{{ $socialLinks->facebook_url }}" target="_blank" rel="noopener"
+                                class="me-3">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                        @endif
+
+                        @if (!empty($socialLinks->line_url))
+                            <a href="{{ $socialLinks->line_url }}" target="_blank" rel="noopener" class="me-3">
+                                <i class="fab fa-line fa-lg"></i>
+                            </a>
+                        @endif
+
+                        @if (!empty($socialLinks->instagram_url))
+                            <a href="{{ $socialLinks->instagram_url }}" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        @endif
+                    </div>
+                @endif
+
+                <!-- 手機版選單按鈕 -->
+                <div class="mobile-menu-trigger d-lg-none">
                     <span></span>
                 </div>
             </nav>
@@ -186,8 +166,9 @@
                 <div class="row">
                     <div class="col-12 col-md-3">
                         <div class="sofax-footer-wrap">
-                            <a href="{{ route('home') }}"><img
-                                    src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt=""></a>
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('frontend/assets/images/logo/logo-1.png') }}" alt="">
+                            </a>
                             <p>格尚資訊是專業的資訊服務公司，提供ERP導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售等服務。</p>
                         </div>
                     </div>

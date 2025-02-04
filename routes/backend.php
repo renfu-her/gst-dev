@@ -32,6 +32,7 @@ use App\Http\Controllers\Admin\{
     AboutUsController,
     FeedbackController,
     PostMenuController,
+    SocialLinkController,
 };
 
 
@@ -170,4 +171,8 @@ Route::group([
 
     // 文章選單管理
     Route::resource('post-menus', PostMenuController::class);
+
+    // 社群媒體連結
+    Route::get('social-links/edit', [SocialLinkController::class, 'edit'])->name('social-links.edit');
+    Route::put('social-links', [SocialLinkController::class, 'update'])->name('social-links.update');
 });

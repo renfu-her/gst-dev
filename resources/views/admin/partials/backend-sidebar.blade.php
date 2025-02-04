@@ -131,6 +131,13 @@
             </div>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.social-links.edit') }}">
+                <i class="fas fa-share-alt menu-icon"></i>
+                <span class="menu-title">社群媒體連結</span>
+            </a>
+        </li>
+
         {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.feedbacks.index') }}">
                 <i class="fas fa-comment menu-icon"></i>

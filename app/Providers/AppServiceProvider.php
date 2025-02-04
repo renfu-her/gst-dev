@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\PostMenu;
+use App\Models\SocialLink;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,11 +22,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // 將選單數據共享給所有視圖
-        view()->composer('frontend.layouts.app', function ($view) {
-            $view->with('menuItems', PostMenu::where('is_active', true)
-                ->orderBy('id', 'asc')
-                ->get());
+        // 共享菜單項目到所有視圖
+        View::composer('*', function ($view) {
+            $menuItems = PostMenu::where('is_active', true)->get();
+            $socialLinks = SocialLink::first();
+
+            $view->with([
+                'menuItems' => $menuItems,
+                'socialLinks' => $socialLinks
+            ]);
         });
     }
 }

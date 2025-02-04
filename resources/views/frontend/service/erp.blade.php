@@ -8,9 +8,9 @@
             <h1 class="post__title">ERP導入服務</h1>
             <nav class="breadcrumbs">
                 <ul>
-                    <li><a href='{{ route('home') }}'>首頁</a></li>
+                    {{-- <li><a href='{{ route('home') }}'>首頁</a></li>
                     <li><img src="{{ asset('frontend/assets/images/about/arrow.png') }}" alt=""></li>
-                    <li aria-current="page">ERP導入服務</li>
+                    <li aria-current="page">ERP導入服務</li> --}}
                 </ul>
             </nav>
         </div>

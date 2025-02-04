@@ -7,11 +7,11 @@
         <div class="container">
             <h1 class="post__title">機房規劃建置</h1>
             <nav class="breadcrumbs">
-                <ul>
+                {{-- <ul>
                     <li><a href='{{ route('home') }}'>首頁</a></li>
                     <li><img src="{{ asset('frontend/assets/images/about/arrow.png') }}" alt=""></li>
                     <li aria-current="page">機房規劃建置</li>
-                </ul>
+                </ul> --}}
             </nav>
         </div>
     </div>

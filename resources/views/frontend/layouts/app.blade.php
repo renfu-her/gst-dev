@@ -105,14 +105,58 @@
                             <li class="nav-item">
                                 <a href="{{ route('home') }}" class="nav-link-item">首頁</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link-item">服務項目</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link-item">關於我們</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link-item">聯絡我們</a>
+                            <li class="nav-item nav-item-has-children">
+                                <a href="#" class='nav-link-item drop-trigger'>服務項目
+                                    <i class="fas fa-angle-down"></i>
+                                </a>
+
+                                <ul class="sub-menu" id="submenu-1">
+
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.erp') }}">
+                                            <span class="menu-item-text">
+                                                ERP 導入服務
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.project') }}">
+                                            <span class="menu-item-text">
+                                                專案開發
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.software') }}">
+                                            <span class="menu-item-text">
+                                                軟體銷售
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.server') }}">
+                                            <span class="menu-item-text">
+                                                機房規劃建置
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.outsourcing') }}">
+                                            <span class="menu-item-text">
+                                                資訊委外服務
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="sub-menu--item">
+                                        <a href="{{ route('services.hardware') }}">
+                                            <span class="menu-item-text">
+                                                硬體銷售
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             @foreach ($menuItems as $menu)
                                 <li class="nav-item">

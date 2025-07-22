@@ -1,247 +1,158 @@
-# 後臺 DEMO
+# 格尚資訊 - 企業網站
 
-## 後台管理
-- `/admin`
-    - 帳號：admin@admin.com 
-    - 密碼：Qq123456
+這是一個基於 Laravel 框架開發的企業形象網站，專注於展示格尚資訊的專業服務。
 
-- 前臺頁面
-  
-[前端首頁](https://shop-demo02.dev-vue.com/)
-    
-- 後台頁面
-  
-[後台首頁](https://shop-demo02.dev-vue.com/admin)
+## 專案概述
 
+格尚資訊是專業的資訊服務公司，提供 ERP 導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售等服務。
 
-## 更新說明
-- 2024-12-26 更新產品規格管理-價格 -> 優惠價
-- 2024-12-26 更新上圖方式，可以單張圖片上傳，也可以多張圖片上傳
+## 功能特色
 
-## 使用方式
-- 先建立 mysql 資料庫，並修改 .env 資料庫設定
+### 前台功能
+- ✅ **首頁** - 企業形象展示與服務介紹
+- ✅ **服務項目** - 六大核心服務展示
+  - ERP 導入服務
+  - 專案開發
+  - 軟體銷售
+  - 機房規劃建置
+  - 資訊委外服務
+  - 硬體銷售
+- ✅ **文章選單** - 動態內容管理
+- ✅ **隱私權政策** - 法律條款頁面
+- ✅ **響應式設計** - 支援多種裝置瀏覽
 
-```bash
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=admin-standard
-DB_USERNAME=root
-DB_PASSWORD=
+### 後台管理
+- ✅ **內容管理系統** - 文章、廣告、選單管理
+- ✅ **會員管理** - 會員資料管理
+- ✅ **訂單管理** - 訂單狀態追蹤
+- ✅ **系統設定** - 網站基本設定
+
+## 技術架構
+
+### 後端技術
+- **框架**: Laravel 10.x
+- **資料庫**: MySQL
+- **PHP 版本**: 8.1+
+
+### 前端技術
+- **CSS 框架**: Bootstrap 5
+- **JavaScript**: jQuery, GSAP
+- **圖示**: Font Awesome 6
+- **模板引擎**: Blade
+
+### 第三方整合
+- **驗證碼**: 自建驗證碼系統
+- **郵件服務**: Laravel Mail
+- **圖片處理**: Laravel Image Intervention
+
+## 專案結構
+
+```
+gst-dev/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Frontend/          # 前台控制器
+│   │   │   ├── HomeController.php
+│   │   │   ├── ServiceController.php
+│   │   │   ├── PrivacyController.php
+│   │   │   ├── PostMenuController.php
+│   │   │   └── TestController.php
+│   │   └── Admin/             # 後台控制器
+│   ├── Models/                # 資料模型
+│   └── Services/              # 服務層
+├── resources/views/
+│   ├── frontend/              # 前台視圖
+│   │   ├── layouts/
+│   │   ├── service/
+│   │   ├── post-menus/
+│   │   ├── home.blade.php
+│   │   └── privacy.blade.php
+│   └── admin/                 # 後台視圖
+├── public/
+│   └── frontend/              # 前台靜態資源
+└── routes/
+    └── web.php                # 路由定義
 ```
 
-- 修改 .env 資料庫設定後，安裝套件，建立資料表，新增預設資料
+## 安裝與設定
 
+### 環境需求
+- PHP >= 8.1
+- Composer
+- MySQL >= 5.7
+- Node.js (可選，用於前端資源編譯)
+
+### 安裝步驟
+
+1. **克隆專案**
+```bash
+git clone [repository-url]
+cd gst-dev
+```
+
+2. **安裝依賴**
 ```bash
 composer install
+```
+
+3. **環境設定**
+```bash
 cp .env.example .env
 php artisan key:generate
+```
+
+4. **資料庫設定**
+```bash
+# 編輯 .env 檔案設定資料庫連線
 php artisan migrate
 php artisan db:seed
 ```
 
-### **預設是緑界測試環境，如果需要正式環境，請修改 .env 設定**
-
-## .env
-### 金流
-- ECPAY_MERCHANT_ID=
-- ECPAY_HASH_KEY=
-- ECPAY_HASH_IV=
-
-### 金流測試
-- ECPAY_STAGE_MERCHANT_ID=
-- ECPAY_STAGE_HASH_KEY=
-- ECPAY_STAGE_HASH_IV=
-
-### 電子發票
-- ECPAY_INVOICE_MERCHANT_ID=
-- ECPAY_INVOICE_HASH_KEY=
-- ECPAY_INVOICE_HASH_IV=
-
-### 電子發票測試
-- ECPAY_INVOICE_STAGE_MERCHANT_ID=
-- ECPAY_INVOICE_STAGE_HASH_KEY=
-- ECPAY_INVOICE_STAGE_HASH_IV=
-
-### 電子地圖
-- ECPAY_MAP_API=
-- ECPAY_STAGE_MAP_API=
-
-### 物流
-- ECPAY_SHIPMENT_API=
-- ECPAY_SHIPMENT_MERCHANT_ID=
-- ECPAY_SHIPMENT_HASH_KEY=
-- ECPAY_SHIPMENT_HASH_IV=
-
-### 物流測試
-- ECPAY_STAGE_SHIPMENT_API=
-- ECPAY_STAGE_SHIPMENT_MERCHANT_ID=
-- ECPAY_STAGE_SHIPMENT_HASH_KEY=
-- ECPAY_STAGE_SHIPMENT_HASH_IV=
-
-## 視圖結構 (Views Structure)
-
-### 後台視圖 (Admin)
-#### 活動管理 (activities/)
-- `create.blade.php` - 新增活動
-- `edit.blade.php` - 編輯活動
-- `index.blade.php` - 活動列表與管理
-
-#### 管理員帳號 (admins/)
-- `create.blade.php` - 新增管理員
-- `edit.blade.php` - 編輯管理員資料
-- `index.blade.php` - 管理員列表
-
-#### 廣告管理 (ads/)
-- `create.blade.php` - 新增廣告
-- `edit.blade.php` - 編輯廣告
-- `index.blade.php` - 廣告列表與管理
-
-#### 認證相關 (auth/)
-- `login.blade.php` - 後台登入頁面
-
-#### 購物車管理 (carts/)
-- `create.blade.php` - 新增購物車項目
-- `edit.blade.php` - 編輯購物車項目
-- `index.blade.php` - 購物車列表管理
-
-#### 商品分類 (categories/)
-- `create.blade.php` - 新增分類
-- `edit.blade.php` - 編輯分類
-- `index.blade.php` - 分類列表與管理
-
-#### 郵件設定 (email-settings/)
-- `create.blade.php` - 新增郵件設定
-- `edit.blade.php` - 編輯郵件設定
-- `index.blade.php` - 郵件設定列表
-
-#### FAQ分類 (faq-categories/)
-- `create.blade.php` - 新增FAQ分類
-- `edit.blade.php` - 編輯FAQ分類
-- `index.blade.php` - FAQ分類列表
-
-#### FAQ管理 (faqs/)
-- `create.blade.php` - 新增FAQ
-- `edit.blade.php` - 編輯FAQ
-- `index.blade.php` - FAQ列表與管理
-
-### 共同特點
-1. 後台視圖統一使用 `admin.layouts.app` 布局
-2. 整合 DataTables 實現數據列表
-3. 使用 AJAX 處理狀態切換
-4. 表單驗證與錯誤提示
-5. 響應式設計
-6. 中文化介面
-
-### 特殊功能
-- 訂單狀態展開詳情 (前台)
-- CKEditor 整合 (FAQ和活動)
-- 驗證碼功能 (登入頁)
-- 圖片上傳功能 (活動和廣告)
-
-## 前台視圖結構 (Frontend Views Structure)
-
-### 前台視圖 (Frontend)
-
-#### 布局相關 (layouts/)
-- `app.blade.php` - 主要布局模板
-
-#### 訂單相關 (order/)
-- `list.blade.php` - 訂單列表頁面
-  - 包含付款狀態、出貨狀態、訂單狀態的展開詳情
-  - 整合 Bootstrap collapse 組件
-  - 響應式設計
-
-#### 用戶相關 (user/)
-- `profile.blade.php` - 用戶資料頁面
-- `orders.blade.php` - 用戶訂單歷史
-- `addresses.blade.php` - 收貨地址管理
-
-#### 商品相關 (products/)
-- `index.blade.php` - 商品列表頁
-- `show.blade.php` - 商品詳情頁
-- `category.blade.php` - 分類商品列表
-
-#### 購物車相關 (cart/)
-- `index.blade.php` - 購物車頁面
-- `checkout.blade.php` - 結帳頁面
-
-#### 會員相關 (auth/)
-- `login.blade.php` - 會員登入
-- `register.blade.php` - 會員註冊
-- `forgot-password.blade.php` - 忘記密碼
-
-#### 其他頁面
-- `home.blade.php` - 首頁
-- `about.blade.php` - 關於我們
-- `contact.blade.php` - 聯絡我們
-- `faq.blade.php` - 常見問題
-- `privacy.blade.php` - 隱私政策
-- `terms.blade.php` - 使用條款
-
-### 共同特點
-1. 所有前台頁面統一使用 `frontend.layouts.app` 布局
-2. 響應式設計適配各種設備
-3. 整合 Bootstrap 5 框架
-4. 多語系支援
-5. SEO 優化相關 meta 標籤
-
-### 特殊功能
-1. 訂單狀態展開詳情
-2. 購物車即時更新
-3. 商品圖片預覽
-4. 地址選擇器
-5. 金流整合介面
-
-## 目錄結構樹狀圖
+5. **啟動開發伺服器**
+```bash
+php artisan serve
 ```
-resources/
-├── views/
-├── admin/ # 後台視圖
-│ ├── activities/ # 活動管理
-│ │ ├── create.blade.php # - 新增活動
-│ │ ├── edit.blade.php # - 編輯活動
-│ │ └── index.blade.php # - 活動列表
-│ │
-│ ├── admins/ # 管理員管理
-│ │ ├── create.blade.php # - 新增管理員
-│ │ ├── edit.blade.php # - 編輯管理員
-│ │ └── index.blade.php # - 管理員列表
-│ │
-│ ├── ads/ # 廣告管理
-│ │ ├── create.blade.php # - 新增廣告
-│ │ ├── edit.blade.php # - 編輯廣告
-│ │ └── index.blade.php # - 廣告列表
-│ │
-│ ├── auth/ # 認證相關
-│ │ └── login.blade.php # - 登入頁面
-│ │
-│ ├── carts/ # 購物車管理
-│ │ ├── create.blade.php # - 新增購物車項目
-│ │ ├── edit.blade.php # - 編輯購物車項目
-│ │ └── index.blade.php # - 購物車列表
-│ │
-│ ├── categories/ # 商品分類管理
-│ │ ├── create.blade.php # - 新增分類
-│ │ ├── edit.blade.php # - 編輯分類
-│ │ └── index.blade.php # - 分類列表
-│ │
-│ ├── email-settings/ # 郵件設定
-│ │ ├── create.blade.php # - 新增設定
-│ │ ├── edit.blade.php # - 編輯設定
-│ │ └── index.blade.php # - 設定列表
-│ │
-│ ├── faq-categories/ # FAQ分類管理
-│ │ ├── create.blade.php # - 新增FAQ分類
-│ │ ├── edit.blade.php # - 編輯FAQ分類
-│ │ └── index.blade.php # - FAQ分類列表
-│ │
-│ ├── faqs/ # FAQ管理
-│ │ ├── create.blade.php # - 新增FAQ
-│ │ ├── edit.blade.php # - 編輯FAQ
-│ │ └── index.blade.php # - FAQ列表
-│ │
-│ └── layouts/ # 後台布局
-│ └── app.blade.php # - 主布局文件
 
-```
+## 路由說明
+
+### 前台路由
+- `/` - 首頁
+- `/privacy` - 隱私權政策
+- `/services/*` - 服務項目頁面
+- `/post-menus/{slug}` - 文章選單頁面
+
+### 後台路由
+- `/admin/*` - 後台管理介面
+
+## 重要說明
+
+### 不包含的功能
+⚠️ **本專案不包含以下功能：**
+- 購物車系統
+- 綠界金流整合
+- 會員註冊/登入系統
+- 商品管理系統
+- 付款處理功能
+
+### 測試功能
+- `TestController` 包含綠界金流相關的測試程式碼，但僅供開發測試使用
+- 實際部署時應移除或停用相關功能
+
+## 開發團隊
+
+- **開發者**: 格尚資訊開發團隊
+- **技術支援**: 格尚資訊技術部門
+
+## 授權
+
+本專案為格尚資訊內部專案，版權所有。
+
+## 聯絡資訊
+
+- **公司**: 格尚資訊
+- **網站**: https://www.gst.com
+- **服務**: ERP導入、專案開發、軟體銷售、機房規劃建置、資訊委外服務、硬體銷售
+
+---
+
+*最後更新: 2024年*
